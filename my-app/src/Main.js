@@ -8,6 +8,7 @@ import axios from 'axios';
 import Home from "./Home";
 import Mastery from "./Mastery";
 import Account from "./Account";
+import SearchForm from './Components/SearchForm';
 
 
 // `https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/"{ name }"?api_key=RGAPI-8433dfa0-0e4b-4fc3-9ffa-6ce744c42532`
@@ -28,8 +29,17 @@ class Main extends Component {
     ]
   }
 
-  performSearch = () => {
-
+  performSearch = (query) => {
+    axios.get(`https://euw1.api.riotgames.com/lol/summoner/v4/summoners/by-name/${query}?api_key=RGAPI-30e01bc1-3744-4a93-b219-9c45be4c7f26`)
+      .then(response => {
+        this.setState({
+          gifs: response.data.data,
+          loading: false
+        })
+      })
+      .catch(error => {
+        console.log('Error fetching and parsing data', error);
+      });
   }
 
   render() {
@@ -43,13 +53,8 @@ class Main extends Component {
             <li><NavLink to="/Mastery">Top 3 Mastery</NavLink></li>
           </ul>
           <h2>Search Summoner</h2>
-          <div class="search-bar">
-      			<form id="search-form">
-      				<input type="text" name="summoner" placeholder="Summoner Name" />
-      				<button type="submit">
-      					<span>Search</span>
-      				</button>
-      			</form>
+          <div className="search-bar">
+      			<SearchForm onSearch={this.performSearch} />
       		</div>
           <p><small>Search only works for EU west server</small></p>
           <div className="content">
