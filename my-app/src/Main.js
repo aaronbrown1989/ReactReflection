@@ -9,6 +9,7 @@ import Home from "./Home";
 import Mastery from "./Mastery";
 import Account from "./Account";
 
+//https://dog.ceo/dog-api/documentation/random
 
 class Main extends Component {
 
@@ -16,11 +17,11 @@ class Main extends Component {
     return (
       <HashRouter>
         <div>
-          <h1>League of Legends Account Search</h1>
+          <h1>Random Animal pictures!</h1>
           <ul className="header">
-            <li><NavLink exact to="/">Home</NavLink></li>
-            <li><NavLink to="/Account">Account Info</NavLink></li>
-            <li><NavLink to="/Mastery">Top 3 Mastery</NavLink></li>
+            <li><NavLink exact to="/">Random Dog Picture</NavLink></li>
+            <li><NavLink to="/Account">Random Cat Pictures</NavLink></li>
+            <li><NavLink to="/Mastery">Random Fox Pictures</NavLink></li>
           </ul>
           <div className="content">
             <Route exact path="/" component={Home}/>

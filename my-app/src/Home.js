@@ -1,16 +1,21 @@
 import React, { Component } from "react";
 
+const Random = () => {
+  if(results.length > 0) {
+    dog =
+  }
+
+}
+
 class Home extends Component {
   render() {
     return (
       <div>
-        <h2>Summoner Search</h2>
+        <h2>Random Dog</h2>
         <p>
-          On this site you will be able to search the League of Legends EUW server for players by Summoner name.
+          Press button to get a random picture of a dog!
         </p>
-        <p>
-          You will be able to find out basic account information and their top 3 champions by mastery!
-        </p>
+        <button onClick={Random} type="button">Here boy!</button>
       </div>
     );
   }
