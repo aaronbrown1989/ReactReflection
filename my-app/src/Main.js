@@ -4,7 +4,6 @@ import {
   NavLink,
   HashRouter
 } from "react-router-dom";
-import axios from 'axios';
 import Home from "./Home";
 import Mastery from "./Mastery";
 import Account from "./Account";

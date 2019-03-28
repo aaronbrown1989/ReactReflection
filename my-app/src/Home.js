@@ -1,13 +1,8 @@
 import React, { Component } from "react";
-
-const Random = () => {
-  if(results.length > 0) {
-    dog =
-  }
-
-}
+import RandomDog from "./components/RandomDog.js";
 
 class Home extends Component {
+
   render() {
     return (
       <div>
@@ -15,7 +10,7 @@ class Home extends Component {
         <p>
           Press button to get a random picture of a dog!
         </p>
-        <button onClick={Random} type="button">Here boy!</button>
+        <RandomDog />
       </div>
     );
   }
