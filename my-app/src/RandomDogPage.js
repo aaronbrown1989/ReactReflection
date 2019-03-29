@@ -7,10 +7,12 @@ class RandomDogPage extends Component {
     return (
       <div>
         <h2>Random Dog</h2>
-        <p>
-          Press button to get a random picture of a dog!
-        </p>
-        <RandomDog />
+        <div className="main-body">
+          <p>
+            Press button to get a random picture of a dog!
+          </p>
+          <RandomDog />
+        </div>
       </div>
     );
   }

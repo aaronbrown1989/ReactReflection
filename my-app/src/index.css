@@ -2,32 +2,44 @@
 
 body {
   background-color: #F6F6F6;
-  padding: 20px;
-  margin: 0;
 }
 
 h1, h2, p, ul, li {
   font-family: sans-serif;
 }
 
+.container {
+  max-width: 70%;
+  margin: auto;
+}
+
 /*-- Nav Styling --*/
+
+.navBackground {
+  background-color: #111;
+}
 
 ul.header li {
   display: inline;
   list-style-type: none;
-  margin: 0;
+  padding: 0, 25px;
+  margin: 0, 50px;
+  max-width: 70%;
+  align-self: flex-start;
 }
 
 ul.header {
-  background-color: #111;
   padding: 0;
+  display: flex;
+  max-width: 70%;
+  margin: auto;
 }
 
 ul.header li a {
   color: #FFF;
   font-weight: bold;
   text-decoration: none;
-  padding: 20px;
+  padding: 20px 50px;
   display: inline-block;
 }
 
@@ -38,11 +50,37 @@ ul.header li a {
 /*-- Content Styling --*/
 
 .content {
-  background-color: #FFF;
-  padding: 20px;
+  padding: 50px;
 }
 
 .content h2 {
-  padding: 0;
-  margin: 0;
+  margin:0 0 40px;
+}
+
+/* Random Dog Pictures/Dogs By Breed Styling */
+
+button {
+  margin-bottom: 20px;
+  background-color: #0099FF;
+  color: #fff;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+button:active {
+  background-color: #007acc;
+}
+
+img {
+  max-width: 500px;
+  max-height: 325px;
+  box-shadow: 10px 10px 22px 1px rgba(0,0,0,0.75);
+}
+
+select {
+  font-size: 20px;
+  padding: 10px;
+  border: none;
 }

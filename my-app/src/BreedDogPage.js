@@ -6,7 +6,9 @@ class BreedDogPage extends Component {
     return (
       <div>
         <h2>Dog pictures by Breed</h2>
-        <BreedDog />
+        <div className="main-content">
+          <BreedDog />
+        </div>
       </div>
     );
   }
