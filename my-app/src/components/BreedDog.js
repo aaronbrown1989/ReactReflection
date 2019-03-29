@@ -10,8 +10,8 @@ class BreedDog extends Component {
     this.handleChange = this.handleChange.bind(this);
   }
 
-  callApi = () => {
-    fetch(`https://dog.ceo/api/breed/${this.state.value}/images/random`)
+  callApi = (breedDog) => {
+    fetch(`https://dog.ceo/api/breed/${breedDog}/images/random`)
     .then(results => {
       return results.json();
     }).then(data =>{
@@ -22,11 +22,12 @@ class BreedDog extends Component {
   }
 
   handleButtonClick = () => {
-    this.callApi()
+    this.callApi(this.state.value)
   }
 
   componentDidMount =() => {
-    this.callApi()
+    this.setState({value: "affenpinscher"})
+    this.callApi("affenpinscher")
   }
 
   handleChange(event) {

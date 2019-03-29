@@ -16,7 +16,7 @@ class Main extends Component {
     return (
       <HashRouter>
         <div>
-          <h1>Random Animal pictures!</h1>
+          <h1>Random Dog pictures!</h1>
           <ul className="header">
             <li><NavLink exact to="/">Home</NavLink></li>
             <li><NavLink to="/RandomDogPage">Random Dog Pictures</NavLink></li>
