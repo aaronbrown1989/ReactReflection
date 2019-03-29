@@ -1,16 +1,14 @@
 import React, { Component } from "react";
-import RandomDog from "./components/RandomDog.js";
 
 class Home extends Component {
 
   render() {
     return (
       <div>
-        <h2>Random Dog</h2>
+        <h2>DOGGOS!</h2>
         <p>
-          Press button to get a random picture of a dog!
+          On this site you will be able to get a random picture of a dog or a random picture of a dog by breed.
         </p>
-        <RandomDog />
       </div>
     );
   }

@@ -5,8 +5,8 @@ import {
   HashRouter
 } from "react-router-dom";
 import Home from "./Home";
-import Mastery from "./Mastery";
-import Account from "./Account";
+import RandomDogPage from "./RandomDogPage";
+import BreedDogPage from "./BreedDogPage";
 
 //https://dog.ceo/dog-api/documentation/random
 
@@ -18,14 +18,14 @@ class Main extends Component {
         <div>
           <h1>Random Animal pictures!</h1>
           <ul className="header">
-            <li><NavLink exact to="/">Random Dog Picture</NavLink></li>
-            <li><NavLink to="/Account">Random Cat Pictures</NavLink></li>
-            <li><NavLink to="/Mastery">Random Fox Pictures</NavLink></li>
+            <li><NavLink exact to="/">Home</NavLink></li>
+            <li><NavLink to="/RandomDogPage">Random Dog Pictures</NavLink></li>
+            <li><NavLink to="/BreedDogPage">Dogs by breed</NavLink></li>
           </ul>
           <div className="content">
             <Route exact path="/" component={Home}/>
-            <Route path="/Account" component={Account}/>
-            <Route path="/Mastery" component={Mastery}/>
+            <Route path="/RandomDogPage" component={RandomDogPage}/>
+            <Route path="/BreedDogPage" component={BreedDogPage}/>
           </div>
         </div>
       </HashRouter>

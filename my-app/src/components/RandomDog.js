@@ -23,7 +23,7 @@ class RandomDog extends Component {
     this.callApi()
   }
 
-  componentDidMount =() => {
+  componentDidMount = () => {
     this.callApi()
   }
 
@@ -31,8 +31,8 @@ class RandomDog extends Component {
     return(
       <div className="container2">
       <button onClick={this.handleButtonClick.bind(this)}>
-  Click me
-</button>
+        Here boy!
+      </button>
         <div className="container1">
           <img alt="Random Dog" src={this.state.pictures} />
         </div>
