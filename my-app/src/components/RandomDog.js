@@ -15,7 +15,6 @@ class RandomDog extends Component {
     }).then(data =>{
       console.log(data)
       this.setState({pictures: data.message});
-      console.log("state", this.state.pictures)
     })
   }
 

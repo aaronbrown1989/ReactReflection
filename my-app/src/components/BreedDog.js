@@ -17,7 +17,6 @@ class BreedDog extends Component {
     }).then(data =>{
       console.log(data)
       this.setState({pictures: data.message});
-      console.log("state", this.state.pictures)
     })
   }
 
@@ -37,6 +36,9 @@ class BreedDog extends Component {
   render () {
     return(
       <div className="container2">
+        <p>
+          Select the dog breed you wish to find pictures of here.
+        </p>
         <select id="dog-selector" value={this.state.value} onChange={this.handleChange}>
           <option value="affenpinscher">Affenpinscher</option>
           <option value="african">African</option>
@@ -144,7 +146,7 @@ class BreedDog extends Component {
           <option value="spaniel-sussex">Sussex Spaniel</option>
           <option value="spaniel-welsh">Welsh Spaniel</option>
           <option value="springer-english">English Springer</option>
-          <option value="stbernard">Stbernard</option>
+          <option value="stbernard">St. Bernard</option>
           <option value="terrier-american">American Terrier</option>
           <option value="terrier-australian">Australian Terrier</option>
           <option value="terrier-bedlington">Bedlington Terrier</option>

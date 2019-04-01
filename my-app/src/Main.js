@@ -7,6 +7,7 @@ import {
 import Home from "./Home";
 import RandomDogPage from "./RandomDogPage";
 import BreedDogPage from "./BreedDogPage";
+import Footer from "./Footer";
 
 //https://dog.ceo/dog-api/documentation/random
 
@@ -33,6 +34,7 @@ class Main extends Component {
               <Route path="/BreedDogPage" component={BreedDogPage}/>
             </div>
           </div>
+          <Footer />
         </div>
       </HashRouter>
     );

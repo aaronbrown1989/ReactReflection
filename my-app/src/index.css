@@ -4,8 +4,12 @@ body {
   background-color: #F6F6F6;
 }
 
-h1, h2, p, ul, li {
+h1, h2, p, ul, li, a {
   font-family: sans-serif;
+}
+
+a:visited {
+  color: blue;
 }
 
 .container {
@@ -50,11 +54,19 @@ ul.header li a {
 /*-- Content Styling --*/
 
 .content {
-  padding: 50px;
+  padding-top: 50px;
 }
 
 .content h2 {
   margin:0 0 40px;
+}
+
+.inlineLink {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-decoration: none;
 }
 
 /* Random Dog Pictures/Dogs By Breed Styling */
@@ -83,4 +95,28 @@ select {
   font-size: 20px;
   padding: 10px;
   border: none;
+}
+
+/*-- Footer Styling --*/
+
+.footer {
+  background-color: #111;
+  color: #fff;
+  position: fixed;
+left: 0;
+bottom: 0;
+width: 100%
+}
+
+.footerList {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%;
+  margin: auto;
+  list-style: none;
+  padding: 20px 0;
+}
+
+.footerList li {
+  padding-top: 5px;
 }

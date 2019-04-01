@@ -12,9 +12,10 @@ class Home extends Component {
           </p>
           <p>
             This site was built using React and React-Router. Using the API from &nbsp;
-            <a href="https://dog.ceo/dog-api/">
+            <a className="inlineLink" rel='noopener noreferrer' href="https://dog.ceo/dog-api/" target="_blank">
               https://dog.ceo/dog-api
             </a>
+            .
           </p>
         </div>
       </div>
