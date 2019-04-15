@@ -103,9 +103,9 @@ select {
   background-color: #111;
   color: #fff;
   position: fixed;
-left: 0;
-bottom: 0;
-width: 100%
+  left: 0;
+  bottom: 0;
+  width: 100%
 }
 
 .footerList {
