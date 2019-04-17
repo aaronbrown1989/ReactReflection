@@ -5,6 +5,7 @@ class RandomDog extends Component {
     super();
       this.state = {
         pictures: [],
+        loading: true
     };
   }
 
@@ -13,8 +14,10 @@ class RandomDog extends Component {
     .then(results => {
       return results.json();
     }).then(data =>{
-      console.log(data)
-      this.setState({pictures: data.message});
+      this.setState({
+        pictures: data.message,
+        loading: false
+      });
     })
   }
 
@@ -22,7 +25,7 @@ class RandomDog extends Component {
     this.callApi()
   }
 
-  componentDidMount = () => {
+  componentWillMount = () => {
     this.callApi()
   }
 
@@ -33,7 +36,11 @@ class RandomDog extends Component {
         Here boy!
       </button>
         <div className="container1">
-          <img alt="Random Dog" src={this.state.pictures} />
+          {
+            this.state.loading
+            ? <p>Loading...</p>
+            : <img alt="Random Dog" src={this.state.pictures} />
+          }
         </div>
       </div>
     )

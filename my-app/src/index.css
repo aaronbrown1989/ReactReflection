@@ -1,5 +1,9 @@
 /*-- General Styling --*/
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: #F6F6F6;
 }
@@ -26,20 +30,17 @@ a:visited {
 ul.header li {
   display: inline;
   list-style-type: none;
-  padding: 0, 25px;
-  margin: 0, 50px;
   max-width: 70%;
   align-self: flex-start;
 }
 
-ul.header {
+.header {
   padding: 0;
-  display: flex;
   max-width: 70%;
   margin: auto;
 }
 
-ul.header li a {
+.header li a {
   color: #FFF;
   font-weight: bold;
   text-decoration: none;
@@ -86,9 +87,12 @@ button:active {
 }
 
 img {
-  max-width: 500px;
+  max-width: 100%;
   max-height: 325px;
+  width: auto;
+  height: auto;
   box-shadow: 10px 10px 22px 1px rgba(0,0,0,0.75);
+  margin-bottom: 100px;
 }
 
 select {
@@ -105,7 +109,7 @@ select {
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 100%
+  width: 100vw;
 }
 
 .footerList {
@@ -119,4 +123,39 @@ select {
 
 .footerList li {
   padding-top: 5px;
+}
+
+/*-- media querys --*/
+
+@media (max-width: 769px) {
+  .container {
+    max-width: 80%;
+  }
+
+  .header {
+    display: block;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 415px) {
+
+  .container {
+    max-width: 100%;
+    margin: 0 10px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .header {
+    display: block;
+    max-width: none;
+  }
+
+  .header li a {
+    width: 100%;
+    text-align: center;
+  }
 }

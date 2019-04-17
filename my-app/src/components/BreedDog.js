@@ -5,7 +5,8 @@ class BreedDog extends Component {
     super();
       this.state = {
         pictures: [],
-        dogBreed: ""
+        dogBreed: "",
+        loading: true
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -15,8 +16,10 @@ class BreedDog extends Component {
     .then(results => {
       return results.json();
     }).then(data =>{
-      console.log(data)
-      this.setState({pictures: data.message});
+      this.setState({
+        pictures: data.message,
+        loading: false
+      });
     })
   }
 
@@ -24,7 +27,7 @@ class BreedDog extends Component {
     this.callApi(this.state.value)
   }
 
-  componentDidMount =() => {
+  componentWillMount =() => {
     this.setState({value: "affenpinscher"})
     this.callApi("affenpinscher")
   }
@@ -177,7 +180,11 @@ class BreedDog extends Component {
           Here boy!
         </button>
         <div className="container1">
-          <img alt={this.state.value} src={this.state.pictures} />
+          {
+            this.state.loading
+            ? <p>Loading...</p>
+            : <img alt={this.state.value} src={this.state.pictures} />
+          }
         </div>
       </div>
     )
